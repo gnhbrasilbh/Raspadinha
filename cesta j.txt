@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Raspadinha Junina - GNH Brasil</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://img.freepik.com/fotos-gratis/fundo-de-festa-junina-com-bandeiras-coloridas_23-2148875079.jpg') no-repeat center center;
+      background-size: cover;
+      text-align: center;
+      padding-top: 50px;
+      color: #fff;
+    }
+    #scratch {
+      width: 300px;
+      height: 200px;
+      background: rgba(128, 128, 128, 0.8);
+      color: #fff;
+      font-size: 18px;
+      line-height: 200px;
+      margin: 0 auto;
+      position: relative;
+      cursor: pointer;
+      border-radius: 10px;
+      user-select: none;
+      transition: 0.3s;
+    }
+    #scratch:hover {
+      background: rgba(128, 128, 128, 0.6);
+    }
+    #message {
+      display: none;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.85);
+      color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Raspadinha Junina GNH Brasil 🎉</h1>
+  <p>Clique na área cinza para raspar e descobrir sua sorte!</p>
+
+  <div id="scratch">Clique aqui!</div>
+  <div id="message">Parabéns! Você ganhou uma Cesta Junina!</div>
+
+  <script>
+    document.getElementById('scratch').addEventListener('click', function() {
+      document.getElementById('message').style.display = 'block';
+      this.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
