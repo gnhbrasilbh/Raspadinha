@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Raspadinha Junina - GNH Brasil</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://img.freepik.com/fotos-gratis/fundo-de-festa-junina-com-bandeiras-coloridas_23-2148875079.jpg') no-repeat center center;
+      background-size: cover;
+      text-align: center;
+      padding-top: 50px;
+    }
+    #scratch {
+      width: 300px;
+      height: 200px;
+      background: gray;
+      color: white;
+      font-size: 18px;
+      line-height: 200px;
+      margin: 0 auto;
+      position: relative;
+      cursor: pointer;
+      border-radius: 10px;
+      user-select: none;
+    }
+    #message {
+      display: none;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Raspadinha Junina GNH Brasil 🎉</h1>
+  <p>Clique na área cinza para raspar e descobrir sua sorte!</p>
+
+  <div id="scratch">Clique aqui!</div>
+  <div id="message"></div>
+
+  <script>
+    const prizes = [
+      "Parabéns! Você ganhou um Voucher Soneca meio-dia na nossa Villa GNH!",
+      "Parabéns! Você ganhou uma Cesta Junina!",
+      "Parabéns! Você ganhou uma Cesta de Chocolate!",
+      "Parabéns! Você ganhou um par de ingressos para o Rodízio de Caldos do Celsinho!",
+      "Não foi dessa vez, mas aguardamos sua confirmação na nossa Villa GNH!"
+    ];
+
+    document.getElementById('scratch').addEventListener('click', function() {
+      const result = prizes[Math.floor(Math.random() * prizes.length)];
+      document.getElementById('message').innerText = result;
+      document.getElementById('message').style.display = 'block';
+      this.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
